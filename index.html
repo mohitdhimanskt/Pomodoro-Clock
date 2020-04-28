@@ -1,48 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
-     <script src="https://kit.fontawesome.com/dab7c098a7.js" crossorigin="anonymous"></script>
-     <link rel="stylesheet" href="style.css">
-        <title>Pomodoro Clock</title>
-    </head>
-    <body>
-       <div id="container">
-           <div data-reactroot="">
-               <div class="main-title">Pomodoro Clock</div>
-               <div class="length-control">
-                   <div id="session-label">Session Length</div>
-                   <button id="session-decrement" class="btn-level" value="-">
-                       <i class="fa fa-arrow-down fa-2x"></i>
-                       
-                   </button>
-                   <div id="session-length" class="btn-level">25</div>
-                   <button id="session-increment" class="btn-level" value="+">
-                    <i class="fa fa-arrow-up fa-2x"></i>
-                   </button>
-                   
-               </div>
-               <div class="timer" >
-                   <div class="timer-wrapper">
-                       <div id="timer-label">Session</div>
-                       <div id="time-left">25:00</div>
-                   </div>
-               </div>
-               <div class="timer-control">
-                   <button id="start_stop">
-                       <i class="fa fa-play fa-2x"></i>
-                   </button>
-                   <button id="start_stop">
-                       <i class="fa fa-pause fa-2x"></i>
-                   </button>
-               </div>
-           </div>
-       </div>
-       <audio id="myAudio">
-        <source src="alarm.mp3" type="audio/mpeg">
-      </audio>
-        <script src="index.js"></script>
-    </body>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/dab7c098a7.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Pomodoro Clock</title>
+</head>
+
+<body>
+  <div id="app">
+    
+    <div>
+      <h1>Pomodoro Clock</h1>
+    </div>
+
+    <div>
+      <h3>Session length</h3>
+    </div>
+
+    <div>
+      <span><a  id = "minus-btn" href=""><i class="fas fa-arrow-up"></i></a></span>
+      <span><input  id="input-number"  type="text" placeholder="Enter minutes" min="1" required="required" ></span>
+      <span><a id = "plus-btn" href=""><i class="fas fa-arrow-down"></i></a></span>
+    </div>
+    
+    <div>
+      <h2 id="timer">
+        <span id="status">00:00</span>
+      </h2>
+    </div>
+
+    <div>
+      <span><a  id= "play-btn" href=""><i  class="fas fa-play-circle"></i></a></span>
+      <span><a  id= "pause-btn" href=""><i class="fas fa-pause-circle"></i></a></span>
+      <span><a  id= "stop-btn" href=""><i class="fas fa-stop-circle"></i></a></span>
+    </div>
+
+  </div>
+  <audio id="myAudio">
+    <source src="alarm.mp3" type="audio/mpeg">
+  </audio>
+  <script src="index.js"></script>
+</body>
+
 </html>
